@@ -29,12 +29,17 @@ unclutter -root -visible &
 # pulse audio session
 start-pulseaudio-x11
 
-# keyboard layout
-xmodmap ~/.i3/xmodmap
-[ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
+#keyboard layout
+setxkbmap us -variant colemak
 
-# color temperature adjustment, set for Gdańsk
-redshift -l 54.35:18.65 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &
+#start synergy
+synergy &
+
+#start emacs
+emacs --daemon &
+
+#color temperature adjustment, set for Gdańsk
+redshift &
 
 # notification
 dunst -config ~/.i3/dunstrc &
