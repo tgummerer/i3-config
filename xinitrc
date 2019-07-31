@@ -48,8 +48,6 @@ dunst -config ~/.i3/dunstrc &
 udiskie &
 
 # terminal server
-urxvtd &
-
 # dropbox
 [ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
 
