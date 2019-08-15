@@ -30,15 +30,9 @@ unclutter -root -visible &
 start-pulseaudio-x11
 
 #keyboard layout
-setxkbmap us -variant colemak
+setxkbmap us
 
 #start synergy
-synergy &
-
-#start emacs
-emacs --daemon &
-
-#color temperature adjustment, set for Gdańsk
 redshift &
 
 # notification
