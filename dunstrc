@@ -47,9 +47,4 @@
 [urgency_critical]
     background = "#dc322f"
     foreground = "#DDDDDD"
-    timeout = 0
-
-[ignore]
-    appname = "Spotify"
-    summary = "*"
-    format = ""
+    timeout = 5

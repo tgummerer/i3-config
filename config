@@ -20,7 +20,7 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #333333
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -133,14 +133,4 @@ bindsym XF86Display exec "arandr"
 bindsym $mod+a exec "urxvtc -e alsamixer"
 bindsym $mod+Shift+a exec "pavucontrol"
 
-bar {
-        position top
-        status_command ~/.i3/bin/conky-wrapper
-        colors { 
-                statusline #fdf6e3
-                background #fdf6e3
-                focused_workspace $gray2 $gray2 #586e75
-                inactive_workspace $gray1 $gray1 #93a1a1
-        }
-}
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
